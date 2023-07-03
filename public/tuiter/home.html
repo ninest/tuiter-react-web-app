@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tuiter Home</title>
+  </head>
+  <body>
+    <a href="./navigation.html">Back</a>
+    <h1>Tuiter</h1>
+    <h2>Home</h2>
+
+    <!-- User profile image -->
+    <img
+      src="https://thumbs.dreamstime.com/b/funny-cartoon-monster-face-vector-square-avatar-halloween-175916751.jpg"
+      alt="User profile photo"
+      width="100"
+      height="100"
+    />
+
+    <!-- New tuit form -->
+    <form>
+      <!-- Text box -->
+      <textarea id="tweet" cols="30" rows="3" placeholder="What's happening?"></textarea>
+
+      <br />
+
+      <!-- Who can reply? -->
+      <select id="select-reply">
+        <option selected value="EVERYONE">Everyone can reply</option>
+        <option value="FOLLOWING">People you follow</option>
+        <option value="MENTIONED">Only people you mention</option>
+      </select>
+
+      <!-- Select image -->
+      <hr />
+      <input type="file" />
+
+      <button type="submit">Tuit</button>
+      <hr />
+    </form>
+  </body>
+</html>
