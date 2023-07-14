@@ -1,0 +1,86 @@
+.wd-header {
+  padding: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.wd-header-group {
+  display: flex;
+  align-items: center;
+}
+.wd-back-button {
+  width: 3rem;
+  text-decoration: none;
+  color: black;
+}
+.wd-header-title {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.wd-more-button {
+  border: none;
+  background: none;
+}
+
+.wd-tweet-list {
+  list-style: none;
+}
+
+.wd-tweet + .wd-tweet {
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+.wd-tweet {
+  display: flex;
+  padding: 1rem;
+}
+.wd-tweet-profile img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.wd-tweet-profile img {
+  border-radius: 50%;
+}
+
+.wd-tweet-start {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.wd-author {
+  font-weight: bold;
+}
+.wd-handle,
+.wd-date {
+  color: #555;
+}
+
+.wd-tweet-content {
+  margin-top: 0.5rem;
+}
+
+.wd-embed {
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.wd-embed img {
+  width: 100%;
+}
+.wd-embed-text {
+  padding: 1rem;
+}
+.wd-embed-url {
+  color: #777;
+}
+.wd-embed-title {
+  margin-top: 0.1rem;
+  font-weight: bold;
+}
+.wd-embed-desc {
+  margin-top: 0.1rem;
+}
