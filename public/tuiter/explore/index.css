@@ -1,4 +1,6 @@
-
+.wd-explore-page {
+  border: 1px solid #eee;
+}
 
 .wd-header {
   padding-top: 1rem;
@@ -47,6 +49,12 @@
   color: #777;
   font-weight: bold;
   text-decoration: none;
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  .wd-header_link {
+    font-size: 0.75rem;
+  }
 }
 .wd-header_selected-link {
   display: block;
