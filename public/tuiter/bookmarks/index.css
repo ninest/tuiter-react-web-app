@@ -53,6 +53,9 @@
 .wd-author {
   font-weight: bold;
 }
+.wd-verified {
+  color: rgb(95, 95, 255);
+}
 .wd-handle,
 .wd-date {
   color: #555;
@@ -83,4 +86,24 @@
 }
 .wd-embed-desc {
   margin-top: 0.1rem;
+}
+
+.wd-actions {
+  margin-top: 1rem;
+  margin-right: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #777;
+}
+.wd-action {
+  display: flex;
+  align-items: center;
+}
+.wd-action-liked {
+  color: red;
+}
+.wd-action-icon {
+  margin-right: 1rem;
 }
