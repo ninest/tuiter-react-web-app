@@ -15,25 +15,66 @@
   <body>
     <div class="container my-2">
       <div class="row">
-        <div class="col">
+        <div class="col-2 col-lg-2">
           <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action" aria-current="true">
               <i class="fa-brands fa-twitter"></i>
             </a>
-            <a href="#" class="list-group-item list-group-item-action"> <i class="fa fa-home pe-1"></i>Home</a>
-            <a href="#" class="list-group-item list-group-item-action active"
-              ><i class="fa fa-hashtag pe-1"></i>Explore</a
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
             >
-            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-bell pe-1"></i>Notifications</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-envelope pe-1"></i>Messages</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-bookmark pe-1"></i>Bookmarks</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-list pe-1"></i>Lists</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-user pe-1"></i>Profile</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-ellipsis pe-1"></i>More</a>
+              <i class="fa fa-home"></i>
+              <div class="d-none d-lg-block ps-lg-2">Home</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action active d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-hashtag pe-1"></i>
+              <div class="d-none d-lg-block ps-lg-2">Explore</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-bell"></i>
+              <div class="d-none d-lg-block ps-lg-2">Notifications</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-envelope"></i>
+              <div class="d-none d-lg-block ps-lg-2">Messages</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-bookmark"></i>
+              <div class="d-none d-lg-block ps-lg-2">Bookmarks</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-list"></i>
+              <div class="d-none d-lg-block ps-lg-2">Lists</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-user"></i>
+              <div class="d-none d-lg-block ps-lg-2">Profile</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-md-start"
+              ><i class="fa fa-ellipsis"></i>
+              <div class="d-none d-lg-block ps-lg-2">More</div>
+            </a>
           </div>
-          <a class="mt-2 btn btn-primary btn-block block d-block rounded rounded-pill" href="#" role="button">Tweet</a>
+          <a class="mt-2 btn btn-primary btn-block btn-sm block d-block rounded rounded-pill" href="#" role="button"
+            >Tweet</a
+          >
         </div>
-        <div class="col-6">
+        <div class="col-10 col-lg-7">
           <header>
             <div class="d-flex align-items-center">
               <input type="search" class="form-control rounded-pill me-2" />
@@ -64,8 +105,8 @@
             <div class="carousal-inner">
               <div class="corousel-item active">
                 <img src="./cover.jpg" alt="Buildings" class="w-100" />
-                <div class="carousel-caption left-0">
-                  <div class="text-start h3">SpaceX's Starship</div>
+                <div class="carousel-caption" style="left: 0.5rem; bottom: 0; padding-bottom: 0 !important">
+                  <div class="text-start h1">SpaceX's Starship</div>
                 </div>
               </div>
             </div>
@@ -96,30 +137,71 @@
                 </div>
               </div>
             </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-9">
+                  <div class="text-muted">Web Development</div>
+                  <div>
+                    <span> <b>Java</b> <i class="fa-solid fa-circle-check"></i></span>
+                    <span class="text-muted"> - 4h</span>
+                  </div>
+                  <div>
+                    <b>
+                      Java.js is a component based back-end library that makes it very easy to make Single Page
+                      Applications or SPAs
+                    </b>
+                    <div class="text-muted">123.4K Tweets</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <img
+                    src="https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_169577.png"
+                    alt="React"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="col">
+        <div class="d-none d-lg-block col-lg-3">
           <div class="list-group">
             <div class="list-group-item list-group-item-action">
               <b> Who to follow </b>
             </div>
             <div class="list-group-item list-group-item-action">
-              <div class="d-flex">
-                <div class="">
-                  <img
-                    src="https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_169577.png"
-                    alt="logo"
-                    class="w-100"
-                  />
-                </div>
-                <div class="">
-                  <div>
+              <div class="row">
+                <img
+                  src="https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_169577.png"
+                  alt="logo"
+                  class="col-3"
+                />
+                <div class="col-5">
+                  <div class="small">
                     <b>Java</b> <i class="fa-solid fa-circle-check"></i>
                     <div>@Java</div>
                   </div>
                 </div>
-                <div class="">
-                  <button class="btn btn-primary rounded-pill">Follow</button>
+                <div class="col-4">
+                  <button class="btn btn-primary btn-sm rounded-pill">Follow</button>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item list-group-item-action">
+              <div class="row">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                  alt="logo"
+                  class="col-3"
+                />
+                <div class="col-5">
+                  <div class="small">
+                    <b>React</b> <i class="fa-solid fa-circle-check"></i>
+                    <div>@React</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button class="btn btn-primary btn-sm rounded-pill">Follow</button>
                 </div>
               </div>
             </div>
