@@ -1,5 +1,6 @@
 .wd-header {
   padding: 1.15rem;
+  padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -15,11 +16,15 @@
 }
 .wd-header-title {
   margin-left: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .wd-more-button {
   border: none;
   background: none;
+}
+.wd-more-button-navbar {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .wd-tweet-list {
@@ -54,7 +59,7 @@
   font-weight: bold;
 }
 .wd-verified {
-  color: rgb(95, 95, 255);
+  color: rgb(121, 121, 251);
 }
 .wd-handle,
 .wd-date {
@@ -64,9 +69,15 @@
 .wd-tweet-content {
   margin-top: 0.5rem;
 }
+.wd-tweet-content p + p {
+  margin-top: 0.5rem;
+}
+.wd-tweet-content a {
+  color: rgb(121, 121, 251);
+}
 
 .wd-embed {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   border: 1px solid #ccc;
   border-radius: 1rem;
   overflow: hidden;
