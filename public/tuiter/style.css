@@ -7,3 +7,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.wd-navigation {
+  padding: 1rem;
+}
+.wd-navigation li {
+  margin-bottom: 0.5rem;
+}
