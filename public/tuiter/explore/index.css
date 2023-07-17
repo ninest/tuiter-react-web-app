@@ -135,6 +135,15 @@
 }
 
 /* FOR BOOTSTRAP */
+.wd-search {
+  position: relative;
+}
+.wd-glass {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+}
 .wd-carousel-text {
   left: 0.5rem !important;
   bottom: 0 !important;
