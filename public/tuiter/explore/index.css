@@ -126,10 +126,17 @@
   margin-bottom: 0.25rem;
 }
 .wd-topic_count {
-  color: #555
+  color: #555;
 }
 .wd-topic_button {
   background: none;
   border: none;
-font-weight: bold;
+  font-weight: bold;
+}
+
+/* FOR BOOTSTRAP */
+.wd-carousel-text {
+  left: 0.5rem !important;
+  bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
