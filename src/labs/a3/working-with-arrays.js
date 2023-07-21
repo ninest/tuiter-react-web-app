@@ -7,6 +7,14 @@ export default function WorkingWithArrays() {
 
   let variableArray1 = [functionScoped, blockScoped, constant1, numberArray1, stringArray1];
 
+  console.log("Working with arrays")
+  console.log(functionScoped)
+  console.log(blockScoped)
+  console.log(constant1)
+  console.log(numberArray1)
+  console.log(stringArray1)
+  console.log(variableArray1)
+
   return (
     <div>
       <h1>Working with Arrays</h1>

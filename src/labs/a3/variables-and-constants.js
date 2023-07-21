@@ -4,8 +4,7 @@ function VariablesAndConstants() {
   const constant1 = functionScoped - blockScoped;
   return (
     <div>
-      <h1>JavaScript</h1>
-      <h2>Variables and Constants</h2>
+      <h1>Variables and Constants</h1>
       functionScoped = {functionScoped}
       <br />
       blockScoped = {blockScoped}
