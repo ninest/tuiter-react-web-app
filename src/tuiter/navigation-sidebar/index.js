@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, Link } from "react-router-dom";
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
+  // eslint-disable-next-line no-unused-vars
   const [ignore, tuiter, active] = pathname.split("/");
   const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"];
   return (

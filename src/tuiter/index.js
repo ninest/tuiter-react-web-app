@@ -1,12 +1,11 @@
-import { Routes, Route } from "react-router";
+import { Route, Routes } from "react-router";
 import Nav from "../nav";
-import NavigationSidebar from "./navigation-sidebar";
-import HomeScreen from "./home-screen";
-import ExploreScreen from "./explore-screen";
 import BookmarksScreen from "./bookmarks-screen";
+import ExploreScreen from "./explore-screen";
+import HomeScreen from "./home-screen";
+import NavigationSidebar from "./navigation-sidebar";
 import ProfileScreen from "./profile-screen";
 import WhoToFollowList from "./who-to-follow-list";
-import WhoToFollowListItem from "./who-to-follow-list/who-to-follow-list-item";
 
 function Tuiter() {
   return (
