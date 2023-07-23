@@ -39,7 +39,7 @@ function ExploreScreen() {
         </li>
       </ul>
       <div className="position-relative mb-2">
-        <img src="/images/starship.png" className="w-100" alt="cover image" />
+        <img src="/images/starship.png" className="w-100" alt="starship cover" />
         <h1 className="position-absolute wd-nudge-up text-white">SpaceX Starship</h1>
       </div>
       <TuitSummaryList />
