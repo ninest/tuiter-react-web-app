@@ -7,8 +7,12 @@ const NavigationSidebar = () => {
   const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"];
   return (
     <div className="list-group">
-      {links.map((link) => (
-        <Link to={`/tuiter/${link}`} className={`list-group-item text-capitalize ${active === link ? "active" : ""}`}>
+      {links.map((link, index) => (
+        <Link
+          key={index}
+          to={`/tuiter/${link}`}
+          className={`list-group-item text-capitalize ${active === link ? "active" : ""}`}
+        >
           {link}
         </Link>
       ))}
