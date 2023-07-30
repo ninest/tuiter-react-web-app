@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/tuits-reducer";
-import { FaTrash } from "react-icons/fa6";
+import { deleteTuit, like, retuit, reply } from "../reducers/tuits-reducer";
+import { FaX, FaComment, FaRetweet, FaHeart, FaChartSimple, FaArrowUpFromBracket } from "react-icons/fa6";
 
 export default function TuitItem({ tuit }) {
   const dispatch = useDispatch();
@@ -8,17 +8,48 @@ export default function TuitItem({ tuit }) {
     dispatch(deleteTuit(id));
   };
 
+  const likeTuit = () => {
+    dispatch(like(tuit._id));
+  };
+  const retuitTuit = () => {
+    dispatch(retuit(tuit._id));
+  };
+  const replyTuit = () => {
+    dispatch(reply(tuit._id));
+  };
+
   return (
     <li className="list-group-item">
       <div className="row">
-        <div className="col-auto">
+        <div className="col-2">
           <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} />
         </div>
         <div className="col-10">
-          <div>
-            <FaTrash onClick={() => deleteTuitHandler(tuit._id)} />
+          <div className="d-flex justify-content-between">
+            <b>{tuit.handle}</b>
+            <div>
+              <FaX onClick={() => deleteTuitHandler(tuit._id)} />
+            </div>
           </div>
+          <div>{tuit.tuit}</div>
         </div>
+      </div>
+      <div className="d-flex justify-content-between">
+        <button className="btn" onClick={replyTuit}>
+          <FaComment /> {tuit.replies}
+        </button>
+        <button className="btn" onClick={retuitTuit}>
+          <FaRetweet /> {tuit.retuits}
+        </button>
+        <button onClick={likeTuit} className="btn" style={tuit.liked ? { color: "red" } : {}}>
+          <FaHeart /> {tuit.likes}
+        </button>
+        <button className="btn ">
+          <FaChartSimple />
+        </button>
+        <button className="btn ">
+          <FaArrowUpFromBracket />
+        </button>
       </div>
     </li>
   );

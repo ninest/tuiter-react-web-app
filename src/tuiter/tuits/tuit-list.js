@@ -5,7 +5,7 @@ export default function TuitList() {
   const { tuits } = useSelector((state) => state.tuits);
 
   return (
-    <ul>
+    <ul className="list-group">
       {tuits.map((tuit, index) => {
         return <TuitItem key={index} tuit={tuit} />;
       })}
