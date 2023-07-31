@@ -22,7 +22,7 @@ export default function TuitItem({ tuit }) {
     <li className="list-group-item">
       <div className="row">
         <div className="col-2">
-          <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} />
+          <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="Logo"/>
         </div>
         <div className="col-10">
           <div className="d-flex justify-content-between">

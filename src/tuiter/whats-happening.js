@@ -22,7 +22,7 @@ const WhatsHappening = () => {
   return (
     <div className="row">
       <div className="col-auto">
-        <img src="/images/nasa.png" width={60} />
+        <img src="/images/nasa.png" width={60} alt={"Logo"}/>
       </div>
       <div className="col-10">
         <textarea
