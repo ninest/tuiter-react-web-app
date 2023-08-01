@@ -21,10 +21,13 @@ export default function TuitItem({ tuit }) {
   return (
     <li className="list-group-item">
       <div className="row">
-        <div className="col-2">
+        <div className="col-2 col-md-1">
+          <div className="d-flex justify-content-center">
+
           <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="Logo"/>
+          </div>
         </div>
-        <div className="col-10">
+        <div className="col-10 col-md-11">
           <div className="d-flex justify-content-between">
             <b>{tuit.handle}</b>
             <div>
@@ -32,9 +35,8 @@ export default function TuitItem({ tuit }) {
             </div>
           </div>
           <div>{tuit.tuit}</div>
-        </div>
-      </div>
-      <div className="d-flex justify-content-between">
+
+          <div className="d-flex justify-content-between">
         <button className="btn" onClick={replyTuit}>
           <FaComment /> {tuit.replies}
         </button>
@@ -51,6 +53,9 @@ export default function TuitItem({ tuit }) {
           <FaArrowUpFromBracket />
         </button>
       </div>
+        </div>
+      </div>
+      
     </li>
   );
 }

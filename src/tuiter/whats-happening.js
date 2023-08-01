@@ -13,16 +13,20 @@ const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState("");
   const tuitClickHandler = () => {
     console.log(whatsHappening);
-    const newTuit = {
-      tuit: whatsHappening,
-    };
-    dispatch(createTuit(newTuit));
-    setWhatsHappening("");
+    if (whatsHappening.trim()) {
+      const newTuit = {
+        tuit: whatsHappening,
+      };
+      dispatch(createTuit(newTuit));
+      setWhatsHappening("");
+    } else {
+      alert("Your tuit cannot be empty!")
+    }
   };
   return (
     <div className="row">
       <div className="col-auto">
-        <img src="/images/nasa.png" width={60} alt={"Logo"}/>
+        <img src="/images/nasa.png" width={60} alt={"Logo"} />
       </div>
       <div className="col-10">
         <textarea
