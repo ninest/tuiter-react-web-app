@@ -14,6 +14,11 @@ function App() {
           <Route path="/labs/*" element={<Labs />} />
           <Route path="/hello" element={<HelloWorld />} />
           <Route path="/tuiter/*" element={<Tuiter />} />
+
+          {/* Redirects */}
+          <Route path="/profile" element={<Navigate to="/tuiter/profile" />} />
+          <Route path="/login" element={<Navigate to="/tuiter/login" />} />
+          <Route path="/register" element={<Navigate to="/tuiter/register" />} />
         </Routes>
       </div>
     </HashRouter>

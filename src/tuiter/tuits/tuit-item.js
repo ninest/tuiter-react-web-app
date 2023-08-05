@@ -1,16 +1,18 @@
+import { FaX } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
-import { deleteTuit, like, retuit, reply } from "../reducers/tuits-reducer";
-import { FaX, FaComment, FaRetweet, FaHeart, FaChartSimple, FaArrowUpFromBracket } from "react-icons/fa6";
+import { like, reply, retuit } from "../reducers/tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
+import TuitStats from "./tuit-stats";
 
 export default function TuitItem({ tuit }) {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   };
 
-  const likeTuit = () => {
-    dispatch(like(tuit._id));
-  };
+  // const likeTuit = () => {
+  //   dispatch(like(tuit._id));
+  // };
   const retuitTuit = () => {
     dispatch(retuit(tuit._id));
   };
@@ -23,8 +25,7 @@ export default function TuitItem({ tuit }) {
       <div className="row">
         <div className="col-2 col-md-1">
           <div className="d-flex justify-content-center">
-
-          <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="Logo"/>
+            <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="Logo" />
           </div>
         </div>
         <div className="col-10 col-md-11">
@@ -36,26 +37,27 @@ export default function TuitItem({ tuit }) {
           </div>
           <div>{tuit.tuit}</div>
 
-          <div className="d-flex justify-content-between">
-        <button className="btn" onClick={replyTuit}>
-          <FaComment /> {tuit.replies}
-        </button>
-        <button className="btn" onClick={retuitTuit}>
-          <FaRetweet /> {tuit.retuits}
-        </button>
-        <button onClick={likeTuit} className="btn" style={tuit.liked ? { color: "red" } : {}}>
-          <FaHeart /> {tuit.likes}
-        </button>
-        <button className="btn ">
-          <FaChartSimple />
-        </button>
-        <button className="btn ">
-          <FaArrowUpFromBracket />
-        </button>
-      </div>
+          <TuitStats tuit={tuit} replyTuit={replyTuit} retuitTuit={retuitTuit} />
+
+          {/* <div className="d-flex justify-content-between">
+            <button className="btn" onClick={replyTuit}>
+              <FaComment /> {tuit.replies}
+            </button>
+            <button className="btn" onClick={retuitTuit}>
+              <FaRetweet /> {tuit.retuits}
+            </button>
+            <button onClick={likeTuit} className="btn" style={tuit.liked ? { color: "red" } : {}}>
+              <FaHeart /> {tuit.likes}
+            </button>
+            <button className="btn ">
+              <FaChartSimple />
+            </button>
+            <button className="btn ">
+              <FaArrowUpFromBracket />
+            </button>
+          </div> */}
         </div>
       </div>
-      
     </li>
   );
 }
