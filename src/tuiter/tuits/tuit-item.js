@@ -25,7 +25,12 @@ export default function TuitItem({ tuit }) {
       <div className="row">
         <div className="col-2 col-md-1">
           <div className="d-flex justify-content-center">
-            <img width={50} className="float-end rounded-circle" src={`/images/${tuit.image}`} alt="Logo" />
+            <img
+              width={50}
+              className="float-end rounded-circle"
+              src={tuit.image ? `/images/${tuit.image}` : `/images/nasa.png`}
+              alt="Logo"
+            />
           </div>
         </div>
         <div className="col-10 col-md-11">
