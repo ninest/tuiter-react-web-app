@@ -21,6 +21,7 @@ const authSlice = createSlice({
     },
     [profileThunk.rejected]: (state, { payload }) => {
       console.log('profile rejected, user null')
+      alert("There is no user")
       state.currentUser = null;
     },
     // [profileThunk.pending]: (state, action) => {

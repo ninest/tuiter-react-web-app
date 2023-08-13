@@ -16,17 +16,22 @@ function ProfileScreen() {
   useEffect(() => {
     const loadProfile = async () => {
       const { payload } = await dispatch(profileThunk());
-      console.log(payload)
+      console.log(payload);
       setProfile(payload);
     };
     loadProfile();
   }, []);
+
+  useEffect(() => {
+    if (!currentUser) navigate('/tuiter/login')
+  }, [currentUser]);
 
   return (
     <div>
       <h1>Profile Screen</h1>
       {profile && (
         <div>
+          <div>You are logged in with the username `{currentUser.username}`.</div>
           <div>
             <label>First Name</label>
             <input

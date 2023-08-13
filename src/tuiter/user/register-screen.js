@@ -12,14 +12,14 @@ function RegisterScreen() {
   const handleRegister = async () => {
     try {
       await dispatch(registerThunk({ username, password }));
-      navigate("/tuiter/profile");
+      navigate("/tuiter/home");
     } catch (e) {
       alert(e);
     }
   };
   return (
     <div>
-      <h1>TODO Register Screen</h1>
+      <h1>Register Screen</h1>
       <div className="mt-2">
         <label>Username</label>
         <input

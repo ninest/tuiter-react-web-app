@@ -9,29 +9,30 @@ const NavigationSidebar = () => {
   const { pathname } = useLocation();
   // eslint-disable-next-line no-unused-vars
   const [ignore, tuiter, active] = pathname.split("/");
-  const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"];
-  const icons = [FaHouse, FaHashtag, FaBell, FaEnvelope, FaBookmark, FaList, FaUser, FaEllipsis];
-
-  
+  const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "more"];
+  const icons = [FaHouse, FaHashtag, FaBell, FaEnvelope, FaBookmark, FaList, FaEllipsis];
 
   return (
     <div className="list-group">
       {!currentUser && (
-        <Link className="list-group" to="/tuiter/login">
+        <Link className="list-group" to="/tuiter/login" className="list-group-item">
           Login
         </Link>
       )}
       {!currentUser && (
-        <Link className="list-group" to="/tuiter/register">
+        <Link className="list-group" to="/tuiter/register" className="list-group-item">
           Register
         </Link>
       )}
       {currentUser && (
         <Link
-          className={`list-group-item text-capitalize d-flex align-items-center justify-content-center justify-content-md-start`}
-          to="/tuiter/profile"
+          to={`/tuiter/${"profile"}`}
+          className={`list-group-item text-capitalize ${
+            active === "profile" ? "active" : ""
+          } d-flex align-items-center justify-content-center justify-content-md-start`}
         >
-          Profile
+          <FaUser />
+          <div className="d-none d-xl-block ps-xl-2">Profile</div>
         </Link>
       )}
       {links.map((link, index) => {
