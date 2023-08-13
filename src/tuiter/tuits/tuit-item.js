@@ -35,7 +35,7 @@ export default function TuitItem({ tuit }) {
         </div>
         <div className="col-10 col-md-11">
           <div className="d-flex justify-content-between">
-            <b>{tuit.handle}</b>
+            <b>{tuit.handle ?? "@user"}</b>
             <div>
               <FaX onClick={() => deleteTuitHandler(tuit._id)} />
             </div>

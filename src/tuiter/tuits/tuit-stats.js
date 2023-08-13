@@ -15,7 +15,8 @@ export default function TuitStats({ tuit, replyTuit, retuitTuit }) {
       </button>
       <button
         onClick={() => {
-          dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 }));
+          if (tuit.liked) dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes - 1, liked: false }));
+          else dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1, liked: true }));
         }}
         className="btn"
         style={tuit.liked ? { color: "red" } : {}}
