@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router";
+import { redirect, useNavigate } from "react-router";
 import { logoutThunk, profileThunk, updateUserThunk } from "./services/auth-thunks";
 
 function ProfileScreen() {
@@ -16,15 +16,16 @@ function ProfileScreen() {
   useEffect(() => {
     const loadProfile = async () => {
       const { payload } = await dispatch(profileThunk());
-      console.log(payload);
+      console.log({payload});
+      if (!payload) navigate('/tuiter/login')
       setProfile(payload);
     };
     loadProfile();
   }, []);
 
-  useEffect(() => {
-    if (!currentUser) navigate('/tuiter/login')
-  }, [currentUser]);
+  // useEffect(() => {
+  //   if (!currentUser) navigate('/tuiter/login')
+  // }, [currentUser]);
 
   return (
     <div>
